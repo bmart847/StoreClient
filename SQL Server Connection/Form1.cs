@@ -147,11 +147,14 @@ namespace SQL_Server_Connection
              switch (number)
              {
                  case 0:                      
-                     cmd = "Select * From " + comboBox1.SelectedItem.ToString()+ " where eID= '" + textBox1.Text + "'";
+                     cmd = "Select * From " + comboBox1.SelectedItem.ToString()+ " where username= '" + textBox1.Text + "'";
                      break;
                  case 1:                      
-                     cmd = "Select * From " + comboBox1.SelectedItem.ToString() + " where sID= '" + textBox1.Text + "'";
+                     cmd = "Select * From " + comboBox1.SelectedItem.ToString() + " where productID= '" + textBox1.Text + "'";
                      break;
+                case 2:
+                    cmd = "Select * From " + comboBox1.SelectedItem.ToString() + " where orderID= '" + textBox1.Text + "'";
+                    break;
                  default:
                      break;
              }
@@ -175,11 +178,14 @@ namespace SQL_Server_Connection
              switch (number)
              {
                  case 0:
-                     cmd = " Delete From " + comboBox1.SelectedItem.ToString() + " where eID= '" + textBox1.Text + "'";
+                     cmd = " Delete From " + comboBox1.SelectedItem.ToString() + " where username= '" + textBox1.Text + "'";
                      break;
                  case 1:
-                     cmd = "Delete From " + comboBox1.SelectedItem.ToString() + " where sID= '" + textBox1.Text + "'";
+                     cmd = "Delete From " + comboBox1.SelectedItem.ToString() + " where productID= '" + textBox1.Text + "'";
                      break;
+                case 2:
+                    cmd = "Delete From " + comboBox1.SelectedItem.ToString() + " where orderID= '" + textBox1.Text + "'";
+                    break;
                  default:
                      break;
              }
@@ -266,7 +272,7 @@ namespace SQL_Server_Connection
              {
                  case 0:
                  case 1:
-                 textBox1.Text = "Enter an ID here";
+                 textBox1.Text = "Enter a username, productID, or orderID here";
                  break;
                  default:
                  textBox1.Text = " ";
@@ -295,12 +301,16 @@ namespace SQL_Server_Connection
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            executeSQL(customQueryTextBox.Text);
+            customQueryTextBox.Clear();
         }
 
-        private void sampleQueriesLabel_Click(object sender, EventArgs e)
+        private void customQueryTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (e.KeyChar == '\'')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

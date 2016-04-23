@@ -35,9 +35,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.customQueryLabel = new System.Windows.Forms.Label();
-            this.executeCustomQuery = new System.Windows.Forms.Button();
             this.customQueryTextBox = new System.Windows.Forms.TextBox();
+            this.executeCustomQuery = new System.Windows.Forms.Button();
+            this.customQueryLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -138,16 +138,12 @@
             this.panel1.Size = new System.Drawing.Size(952, 88);
             this.panel1.TabIndex = 8;
             // 
-            // customQueryLabel
+            // customQueryTextBox
             // 
-            this.customQueryLabel.AutoSize = true;
-            this.customQueryLabel.Font = new System.Drawing.Font("Modern No. 20", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customQueryLabel.Location = new System.Drawing.Point(9, 17);
-            this.customQueryLabel.Name = "customQueryLabel";
-            this.customQueryLabel.Size = new System.Drawing.Size(238, 38);
-            this.customQueryLabel.TabIndex = 0;
-            this.customQueryLabel.Text = "Custom Query";
-            this.customQueryLabel.Click += new System.EventHandler(this.sampleQueriesLabel_Click);
+            this.customQueryTextBox.Location = new System.Drawing.Point(253, 30);
+            this.customQueryTextBox.Name = "customQueryTextBox";
+            this.customQueryTextBox.Size = new System.Drawing.Size(512, 20);
+            this.customQueryTextBox.TabIndex = 9;
             // 
             // executeCustomQuery
             // 
@@ -160,12 +156,15 @@
             this.executeCustomQuery.UseVisualStyleBackColor = true;
             this.executeCustomQuery.Click += new System.EventHandler(this.button6_Click);
             // 
-            // customQueryTextBox
+            // customQueryLabel
             // 
-            this.customQueryTextBox.Location = new System.Drawing.Point(253, 30);
-            this.customQueryTextBox.Name = "customQueryTextBox";
-            this.customQueryTextBox.Size = new System.Drawing.Size(512, 20);
-            this.customQueryTextBox.TabIndex = 9;
+            this.customQueryLabel.AutoSize = true;
+            this.customQueryLabel.Font = new System.Drawing.Font("Modern No. 20", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customQueryLabel.Location = new System.Drawing.Point(9, 17);
+            this.customQueryLabel.Name = "customQueryLabel";
+            this.customQueryLabel.Size = new System.Drawing.Size(238, 38);
+            this.customQueryLabel.TabIndex = 0;
+            this.customQueryLabel.Text = "Custom Query";
             // 
             // Form1
             // 
