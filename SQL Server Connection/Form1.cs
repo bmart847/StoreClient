@@ -292,5 +292,15 @@ namespace SQL_Server_Connection
          {
              displayTable();
          }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sampleQueriesLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
