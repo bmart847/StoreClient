@@ -35,9 +35,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.customQueryTextBox = new System.Windows.Forms.TextBox();
             this.executeCustomQuery = new System.Windows.Forms.Button();
             this.customQueryLabel = new System.Windows.Forms.Label();
+            this.customQueryTextBox = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +57,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(356, 9);
+            this.button1.Location = new System.Drawing.Point(459, 11);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -84,13 +84,13 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(197, 12);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 20);
+            this.textBox1.Size = new System.Drawing.Size(256, 20);
             this.textBox1.TabIndex = 3;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(888, 9);
+            this.button2.Location = new System.Drawing.Point(888, 11);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
@@ -100,7 +100,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(702, 9);
+            this.button3.Location = new System.Drawing.Point(702, 11);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 5;
@@ -110,7 +110,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(783, 9);
+            this.button4.Location = new System.Drawing.Point(783, 11);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 6;
@@ -120,7 +120,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(465, 10);
+            this.button5.Location = new System.Drawing.Point(581, 11);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 7;
@@ -137,13 +137,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(952, 88);
             this.panel1.TabIndex = 8;
-            // 
-            // customQueryTextBox
-            // 
-            this.customQueryTextBox.Location = new System.Drawing.Point(253, 30);
-            this.customQueryTextBox.Name = "customQueryTextBox";
-            this.customQueryTextBox.Size = new System.Drawing.Size(512, 20);
-            this.customQueryTextBox.TabIndex = 9;
             // 
             // executeCustomQuery
             // 
@@ -165,6 +158,15 @@
             this.customQueryLabel.Size = new System.Drawing.Size(238, 38);
             this.customQueryLabel.TabIndex = 0;
             this.customQueryLabel.Text = "Custom Query";
+            // 
+            // customQueryTextBox
+            // 
+            this.customQueryTextBox.AcceptsTab = true;
+            this.customQueryTextBox.Location = new System.Drawing.Point(253, 3);
+            this.customQueryTextBox.Name = "customQueryTextBox";
+            this.customQueryTextBox.Size = new System.Drawing.Size(512, 82);
+            this.customQueryTextBox.TabIndex = 9;
+            this.customQueryTextBox.Text = "";
             // 
             // Form1
             // 
@@ -204,6 +206,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button executeCustomQuery;
         private System.Windows.Forms.Label customQueryLabel;
-        private System.Windows.Forms.TextBox customQueryTextBox;
+        private System.Windows.Forms.RichTextBox customQueryTextBox;
     }
 }

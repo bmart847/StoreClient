@@ -152,7 +152,7 @@ namespace SQL_Server_Connection
                  case 1:                      
                      cmd = "Select * From " + comboBox1.SelectedItem.ToString() + " where productID= '" + textBox1.Text + "'";
                      break;
-                case 2:
+                case 3:
                     cmd = "Select * From " + comboBox1.SelectedItem.ToString() + " where orderID= '" + textBox1.Text + "'";
                     break;
                  default:
@@ -183,7 +183,7 @@ namespace SQL_Server_Connection
                  case 1:
                      cmd = "Delete From " + comboBox1.SelectedItem.ToString() + " where productID= '" + textBox1.Text + "'";
                      break;
-                case 2:
+                case 3:
                     cmd = "Delete From " + comboBox1.SelectedItem.ToString() + " where orderID= '" + textBox1.Text + "'";
                     break;
                  default:
